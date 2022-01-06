@@ -1,3 +1,25 @@
+ <!-- Inetrepolation will resolve to a string in the end, no loops of else/if, but ?:  -->
+<label for="serverName">Server Name</label>
+<!-- One-way binding -->
+<!-- <input id="serverName"
+ type="text"
+  class="form-control"
+  (input)="onUpdateServerName($event)"
+  /> -->
+  <!-- Two way binding, it will update our serverName automatically when it changes -->
+<input id="serverName"
+ type="text"
+  class="form-control"
+  [(ngModel)]="serverName"
+  />
+  <!-- <p>{{ serverName }}</p> -->
+<br>
+<button class="btn btn-primary" 
+[disabled]="!allowNewServer"
+(click)="onCreateServer()">Add Server</button>
+<p>{{ serverCreationStatus }}</p>
+<!-- // will also output true or false -->
+<!-- <p [innerText]="allowNewServer"></p>  -->
 
 <app-server></app-server>
 <app-server></app-server>

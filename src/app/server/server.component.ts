@@ -10,5 +10,9 @@ import { Component } from "@angular/core"; /// to import a @Component decorator
 })
 
 export class ServerComponent {
-
+  serverId: number = 10;
+  serverStatus: string = "offline";
+  getServerStatus() {
+    return this.serverStatus;
+  }
 }
