@@ -23,6 +23,5 @@ export class ServersComponent implements OnInit {
   onReload() {
     // breaks the app, because path servers/servers does not exist "servers" could fix the issue
     this.router.navigate(['servers'], { relativeTo: this.route });
-    console.log('navigate');
   }
 }
